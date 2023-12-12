@@ -1,0 +1,229 @@
+1. What do you understand By Database?
+
+   A database is an organized collection of structured information, 
+   or data, typically stored electronically in a computer system.
+
+2. What is Normalization? 
+   
+   Normalization is the process of organizing the data in the database.
+   Normalization is used to minimize the redundancy from a relation or set of relations.
+   It is also used to eliminate undesirable characteristics like Insertion, Update, and Deletion Anomalies.
+   Normalization divides the larger table into smaller and links them using relationships.
+
+3. What is Difference between DBMS and RDBMS?  
+   
+   RDBMS:In Rdbms Data stored is in table format,In Rdbms Multiple data elements are accessible together,
+         and Data is stored in a large amount,
+         RDBMS supports multiple users.
+   DBMS :In Dbms Data stored is in the file format,
+         In Dbms Individual access of data elements,
+         DBMS supports a single user.
+
+4. What is EF Cod Rule of RDBMS Systems?  
+   
+   Rules:
+         1.Information Rule
+         2.Guaranteed Access Rule
+         3.Systematic Treatment of Null Values  
+         4.Dynamic Online Catalog Based On The Relational Model
+         5.Comprehensive Data Sublanguage Rule
+         6.View Updating Rule
+         7.High-Level insert,Update,and Delete
+         8.Physical Data independence
+         9.Logical Data independence
+        10.Integrity independence
+        11.Distribution independence
+        12.Non-Subversion Rule
+
+5. What do you understand By Data Redundancy? 
+   
+   Data redundancy is when multiple copies of the same information are stored in more than one place at a time.
+
+6. What is DDL Interpreter?  
+   
+   DDL Interpreter: DDL Interpreter: It interprets the DDL (Data Definition Language) Instructions and stores the record in a data dictionary.
+
+7. What is DML Compiler in SQL? 
+
+   A DML (data manipulation language) refers to a computer programming language that allows you to add,
+   delete, and alter data in a database. 
+  
+8. What is SQL Key Constraints writing an Example of SQL Key Constraints?
+
+   There are two SQL key constraints 
+   1. Primary key
+   2. Foreign key
+
+  1. PRIMARY KEY Constraint
+   
+  EXAMPLE:
+
+  CREATE TABLE Colleges (
+  college_id INT PRIMARY KEY,
+  college_code VARCHAR(20) NOT NULL,
+  college_name VARCHAR(50)
+  );     
+
+  2. FOREIGN KEY Constraint
+
+  EXAMPLE:
+ 
+  CREATE TABLE Orders (
+  order_id INT PRIMARY KEY,
+  customer_id int REFERENCES Customers(id)
+  );  
+
+9. What is save Point? How to create a save Point write a Query?
+   
+   A Savepoint is a point in a transaction in which you can roll the transaction back to a certain point without rolling back the entire transaction.
+  
+10. What is trigger and how to create a Trigger in SQL?
+
+   A trigger is a stored procedure in a database that automatically invokes whenever a special event in the database occurs.
+
+  create trigger [trigger_name] 
+
+  [before | after]  
+
+  {insert | update | delete}  
+
+  on [table_name]  
+
+  [for each row]  
+
+  [trigger_body] 
+
+
+#Task1
+-------
+
+CREATE TABLE student( RollNo int PRIMARY KEY AUTO_INCREMENT NOT NULL, Name varchar(30), Branch varchar(300) );
+
+INSERT INTO `student` (`RollNo`, `Name`, `Branch`) VALUES
+('1', 'Jay', 'Computer Science'),
+(NULL, 'Suhani', 'Eletronic and com'),
+(NULL, 'Kriti', 'Eletronic and Com');
+
+
+CREATE TABLE Exam( RollNo int NOT NULL, FOREIGN KEY (RollNo) REFERENCES student(RollNo), S_code varchar(30), Marks Bigint(30), P_code varchar(30) );
+
+INSERT INTO `exam` (`RollNo`, `S_code`, `Marks`, `P_code`) VALUES
+('1', 'CS11', '50', 'CS'), ('1', 'CS12', '60', 'CS'),
+('2', 'EC101', '66', 'EC'), ('2', 'EC102', '70', 'EC'),
+('3', 'EC101', '45', 'EC'), ('3', 'EC102', '50', 'EC');
+
+
+#Task2
+-------
+
+CREATE TABLE task2( FirstName varchar(30), LastName varchar(30), Address varchar(30), City varchar(30), Age bigint(3) );
+
+INSERT INTO `task2` (`FirstName`, `LastName`, `Address`, `City`, `Age`) VALUES 
+('Mickey', 'Mouse', '123 Fantasy Way', 'Anaheim', '73'),
+('Bat  ', 'Man', '321 Caven Ave ', 'Gotham ', '54'), 
+('Wonder ', 'Women', '987 Truth Way', 'Paradise', '39'),
+('Donald ', 'Duck', '555 Quack Street ', 'Mallard', '65'), 
+('Bugs ', 'Bunny', '567 Carrot Street ', 'Rascal', '58'),
+('Wiley', 'Coyote', '999 Acme Way', 'Canyon', '61'), 
+('Cat ', 'Woman', '234 Purfect Street', 'Hair Ball', '32'), 
+('Tweety', 'Bird', '543', 'Itotltaw', '28');
+
+
+
+#Task3
+---------
+
+CREATE TABLE Employee( Employee_id int(5), First_Name varchar(30), Last_Name varchar(30), Salary bigint (30), Joining_Date varchar(30), Department varchar(30) );
+
+
+
+INSERT INTO `employee` (`Employee_id`, `First_Name`, `Last_Name`, `Salary`, `Joining_Date`, `Department`) VALUES 
+('1', 'John', 'Abraham', '1000000', '01-JAN-13', 'Banking'), 
+('2', 'Michael', 'Clarke', '800000', '01-JAN-13', 'Insurance'), 
+('3', 'Roy', 'Thomas', '7000000', '01-FEB-13', 'Banking'), 
+('4', 'Tom', 'Jose', '6000000', '01-FEB-13', 'Insurance'), 
+('5', 'Jerry', 'Pinto', '6500000', '01-FEB-13','Insurance'), 
+('6', 'Pjilip', 'Mathew', '7500000', '01-JAN-13','Services'), 
+('7', 'Testname1', '123', '650000', '01-JAN-13','Services'), 
+('8', 'Testname2', 'Lname%', '6000000', '01-FEB-13','Insurance');
+
+
+
+CREATE TABLE Incentive( Employee_ref_id int (5), Incentive_Date varchar (30), Incentive_amount bigint (50) );
+
+
+
+INSERT INTO `incentive` (`Employee_ref_id`, `Incentive_Date`, `Incentive_amount`) VALUES 
+('1', '01-FEB-13', '5000'), 
+('2', '01-FEB-13', '3000'), 
+('3', '01-FEB-13', '4000'), 
+('1', '01-JAN-13', '4500'), 
+('2', '01-JAN-13', '3500');
+
+A - SELECT First_Name FROM employee WHERE First_Name = 'Tom';
+B - SELECT First_Name, Joining_Date, Salary FROM employee;
+C - SELECT * FROM employee ORDER BY First_Name ASC, Salary DESC;	
+D - SELECT * FROM employee WHERE First_Name LIKE '%J%';
+E - SELECT Department, MAX(Salary) AS Max_Salary FROM employee GROUP BY Department ORDER BY Max_Salary DESC;
+
+
+
+
+
+#Task4
+-------
+
+CREATE TABLE Salesperson( PKSNo int (5), SNAME Varchar (30), CITY Varchar (30), COMM bigint (5) );
+
+
+INSERT INTO `salesperson` (`PKSNo`, `SNAME`, `CITY`, `COMM`) VALUES 
+('1001', 'Peel', 'London', '.12'), 
+('1002', 'Serres', 'San Jose', '.13'),
+('1004', 'Motika', 'London', '.11'), 
+('1007', 'Rafkin', 'Barcelona', '.15'), 
+('1003', 'Axelrod', 'New York', '.1');
+
+
+
+CREATE TABLE Customer( PKCNM int (5), CNAME Varchar (30), CITY Varchar (30), RATING bigint (5), FKSNO int (5) );
+
+
+INSERT INTO `customer` (`PKCNM`, `CNAME`, `CITY`, `RATING`, `FKSNO`) VALUES 
+('201', 'Hoffman', 'London', '100', '1001'), 
+('202', 'Giovanne', 'Roe', '200', '1003'), 
+('203', 'Liu', 'San Jose', '300', '1002'), 
+('204', 'Grass', 'Barcelona', '100', '1002'), 
+('206', 'Clemens', 'London', '300', '1007'), 
+('207', 'Pereira', 'Roe', '100', '1004');
+
+
+
+
+B - SELECT SNAME, City FROM salesperson WHERE City = 'London' AND COMM > 0.12;
+C - SELECT * FROM salesperson WHERE City IN ('Barcelona', 'London');
+
+E - SELECT * FROM customer WHERE Rating > 100 OR CITY = 'Roe';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+   
+
+
+
+
+   

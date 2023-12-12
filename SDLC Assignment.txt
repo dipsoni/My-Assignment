@@ -1,0 +1,81 @@
+1. What is software? What is software engineering?
+=> Software is considered to be collection of executable programming code, associated libraries and documentations.
+   Software, when made for a specific requirement is called software product. Engineering on the other hand, is all
+   about developing products, using well-defined, scientific principles and methods.
+
+
+2. Explain types of software
+=> The two main categories of software are application software and system software. An application is software that 
+   fulfills a specific need or performs tasks. System software is designed to run a computer's hardware and provides 
+   a platform for applications to run on top of.
+
+
+
+3 What is SDLC? Explain each phase of SDLC
+=> The Software Development Life Cycle (SDLC) is a structured process that enables the production of high-quality,
+   low-cost software, in the shortest possible production time.
+
+    1. Requirements gathering and analysis: This phase involves gathering information about the software requirements 
+                                            from stakeholders, such as customers, end-users, and business analysts.
+
+    2. Design: In this phase, the software design is created, which includes the overall architecture of the software,
+               data structures, and interfaces. It has two steps:
+ 
+         High-level design (HLD): It gives the architecture of software products.
+         Low-level design (LLD): It describes how each and every feature in the product
+                                 should work and every component.
+
+   3. Implementation or coding: The design is then implemented in code, usually in several iterations, and this phase 
+                                is also called as Development.
+
+                                things you need to know about this phase:
+
+                                ~This is the longest phase in SDLC model.
+                                ~This phase consists of Front end + Middleware + Back-end.
+                                ~In front-end: Development of coding is done even SEO settings are done.
+                                ~In Middleware: They connect both the front end and back end.
+                                ~In the back-end: A database is created.
+
+  4. Testing: The software is thoroughly tested to ensure that it meets the requirements and works correctly.
+
+  5. Deployment: After successful testing, The software is deployed to a production environment and made available to
+                 end-users.
+
+  6. Maintenance: This phase includes ongoing support, bug fixes, and updates to the software.
+
+
+4. What is DFD?
+=> A data flow diagram (DFD) is a graphical or visual representation using a standardized set of symbols and notations to describe
+   a business's operations through data movement.
+
+
+5.  What is Flow chart?
+=> A flowchart is a picture of the separate steps of a process in sequential order. It is a generic tool that can be adapted for 
+   a wide variety of purposes, and can be used to describe various processes, such as a manufacturing process, an administrative 
+   or service process, or a project plan.
+
+
+6. What is Use case Diagram?
+=> Use-case diagrams describe the high-level functions and scope of a system. These diagrams also identify the interactions between
+   the system and its actors. The use cases and actors in use-case diagrams describe what the system does and how the actors use it, 
+    but not how the system operates internally. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
