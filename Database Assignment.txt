@@ -94,10 +94,7 @@
   [trigger_body] 
 
 
-#Task1
--------
-
-CREATE TABLE student( RollNo int PRIMARY KEY AUTO_INCREMENT NOT NULL, Name varchar(30), Branch varchar(300) );
+1 - CREATE TABLE student( RollNo int PRIMARY KEY AUTO_INCREMENT NOT NULL, Name varchar(30), Branch varchar(300) );
 
 INSERT INTO `student` (`RollNo`, `Name`, `Branch`) VALUES
 ('1', 'Jay', 'Computer Science'),
@@ -113,27 +110,7 @@ INSERT INTO `exam` (`RollNo`, `S_code`, `Marks`, `P_code`) VALUES
 ('3', 'EC101', '45', 'EC'), ('3', 'EC102', '50', 'EC');
 
 
-#Task2
--------
-
-CREATE TABLE task2( FirstName varchar(30), LastName varchar(30), Address varchar(30), City varchar(30), Age bigint(3) );
-
-INSERT INTO `task2` (`FirstName`, `LastName`, `Address`, `City`, `Age`) VALUES 
-('Mickey', 'Mouse', '123 Fantasy Way', 'Anaheim', '73'),
-('Bat  ', 'Man', '321 Caven Ave ', 'Gotham ', '54'), 
-('Wonder ', 'Women', '987 Truth Way', 'Paradise', '39'),
-('Donald ', 'Duck', '555 Quack Street ', 'Mallard', '65'), 
-('Bugs ', 'Bunny', '567 Carrot Street ', 'Rascal', '58'),
-('Wiley', 'Coyote', '999 Acme Way', 'Canyon', '61'), 
-('Cat ', 'Woman', '234 Purfect Street', 'Hair Ball', '32'), 
-('Tweety', 'Bird', '543', 'Itotltaw', '28');
-
-
-
-#Task3
----------
-
-CREATE TABLE Employee( Employee_id int(5), First_Name varchar(30), Last_Name varchar(30), Salary bigint (30), Joining_Date varchar(30), Department varchar(30) );
+2 - CREATE TABLE Employee( Employee_id int(5), First_Name varchar(30), Last_Name varchar(30), Salary bigint (30), Joining_Date varchar(30), Department varchar(30) );
 
 
 
@@ -160,20 +137,30 @@ INSERT INTO `incentive` (`Employee_ref_id`, `Incentive_Date`, `Incentive_amount`
 ('1', '01-JAN-13', '4500'), 
 ('2', '01-JAN-13', '3500');
 
-A - SELECT First_Name FROM employee WHERE First_Name = 'Tom';
-B - SELECT First_Name, Joining_Date, Salary FROM employee;
-C - SELECT * FROM employee ORDER BY First_Name ASC, Salary DESC;	
-D - SELECT * FROM employee WHERE First_Name LIKE '%J%';
-E - SELECT Department, MAX(Salary) AS Max_Salary FROM employee GROUP BY Department ORDER BY Max_Salary DESC;
+3 - SELECT First_Name FROM employee WHERE First_Name = 'Tom';
+
+4 - SELECT First_Name, Joining_Date, Salary FROM employee;
+
+5 - SELECT * FROM employee ORDER BY First_Name ASC, Salary DESC;
+	
+6 - SELECT * FROM employee WHERE First_Name LIKE '%J%';
+
+7 - SELECT Department, MAX(Salary) AS Max_Salary FROM employee GROUP BY Department ORDER BY Max_Salary DESC;
+
+8 - SELECT * FROM Employee, ORDER BY salary ASC;
+
+9 - SELECT e.first_name, i.incentive_amount, FROM employee e, INNER JOIN incentives i ON e.employee_id = i.employee_id, WHERE i.incentive_amount > 3000;
+
+10 - CREATE TRIGGER after_employee_insert, AFTER INSERT ON Employee, FOR EACH ROW, BEGIN
+    INSERT INTO ViewTable (employee_id, employee_name, other_columns)
+    VALUES (NEW.employee_id, NEW.employee_name, NEW.other_columns);
+    END;
 
 
 
 
 
-#Task4
--------
-
-CREATE TABLE Salesperson( PKSNo int (5), SNAME Varchar (30), CITY Varchar (30), COMM bigint (5) );
+11 -CREATE TABLE Salesperson( PKSNo int (5), SNAME Varchar (30), CITY Varchar (30), COMM bigint (5) );
 
 
 INSERT INTO `salesperson` (`PKSNo`, `SNAME`, `CITY`, `COMM`) VALUES 
@@ -198,23 +185,24 @@ INSERT INTO `customer` (`PKCNM`, `CNAME`, `CITY`, `RATING`, `FKSNO`) VALUES
 
 
 
+14 - SELECT SNAME, City FROM salesperson WHERE City = 'London' AND COMM > 0.12;
+15 - SELECT * FROM salesperson WHERE City IN ('Barcelona', 'London');
 
-B - SELECT SNAME, City FROM salesperson WHERE City = 'London' AND COMM > 0.12;
-C - SELECT * FROM salesperson WHERE City IN ('Barcelona', 'London');
+17 - SELECT * FROM customer WHERE Rating > 100 OR CITY = 'Rome';
 
-E - SELECT * FROM customer WHERE Rating > 100 OR CITY = 'Roe';
+18 - SELECT * FROM salespeople;
 
+19 - SELECT ord_no, ord_date, purch_amt, FROM orders, WHERE salesperson_id = 5001;
 
+20 - SELECT pro_id, pro_name, pro_price, pro_com, FROM products, WHERE pro_price BETWEEN 200 AND 600;
 
+21 - SELECT AVG  AS avg_price, FROM products, WHERE man_code = 16; 
 
+22 - SELECT pro_name AS 'Item Name', pro_price AS 'Price in Rs.' FROM products;
 
+23 - SELECT pro_name, pro_price, FROM products WHERE pro_price >= 250 ORDER BY pro_price DESC, pro_name ASC;
 
-
-
-
-
-
-
+24 - SELECT AVG AS average_price, companycode FROM products GROUP BY companycode;
 
 
 
