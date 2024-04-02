@@ -1,0 +1,96 @@
+1 Are the HTML tags and elements the same thing?
+-> No, HTML tags and elements are not the same thing, Tags are the markup characters used to denote the start
+  and end of an element, while elements are made up of a start tag, content, and an end tag. For example, <p>
+  is a tag, and <p>This is a paragraph.</p> is a paragraph element.
+
+
+2 What are tags and attributes in HTML?
+-> Tags are the markup characters used to define the structure of an HTML document. Attributes provide additional 
+  information about HTML elements and are placed within the opening tag of an element.
+
+
+3 What are void elements in HTML?
+-> Void elements are HTML elements that do not have a closing tag. They self-close in the opening tag. Examples include 
+  <img>, <br>, and <input>.
+
+
+4 What are HTML Entities?
+-> HTML entities are special codes used to display reserved characters in HTML. 
+
+
+5 What are different types of lists in HTML?
+-> HTML supports three types of lists:
+   ordered lists <ol>
+   unordered lists <ul>
+   definition lists <dl>.
+  
+
+6 What is the ‘class’ attribute in HTML?
+-> The class attribute is used to specify one or more class names for an HTML element. It is mainly used for styling and 
+  JavaScript manipulation.
+
+
+7 What is the difference between the ‘id’ attribute and the ‘class’ attribute of HTML elements?
+-> The id attribute uniquely identifies an element within a document
+   the class attribute can be applied to multiple elements to categorize them.
+
+
+8 What are the various formatting tags in HTML?
+-> Formatting tags in HTML include <b> for bold, <i> for italic, <u> for underline, <strong> for strong emphasis, <em> for emphasis, 
+  <sub> for subscript, <sup> for superscript, etc.
+
+
+9 How is Cell Padding different from Cell Spacing?
+-> Cell padding in HTML specifies the space between the cell content and the cell border, while cell spacing specifies the space 
+  between cells in a table.
+
+
+10 How can we club two or more rows or columns into a single row or column in an HTML table?
+-> This can be achieved using the rowspan or colspan attributes in the <td> or <th> tags.
+
+
+11 What is the difference between a block-level element and an inline element?
+-> Block-level elements start on a new line and take up the full width available, while inline elements do not start on a new  
+  line and only take up as much width as necessary.
+
+
+12 How to create a Hyperlink in HTML?
+-> Hyperlinks are created using the <a> tag. For example: <a href="https://example.com">Link Text</a>.
+
+
+13 What is the use of an iframe tag?
+-> The <iframe> tag is used to embed another HTML document within the current HTML document.
+
+
+14 What is the use of a span tag? Explain with example?
+-> The <span> tag is used to group inline elements for applying styles or scripting. For example: <span style="color:red;">Red Text</span>.
+
+
+15 How to insert a picture into a background image of a web page?
+-> You can use CSS to set the background image of an HTML element. For example: background-image: url('image.jpg');.
+
+
+16 How are active links different from normal links?
+->  normal link :A normal link is just a line of code that contains a pointer to another resource.
+    active link :An active link is that line of code in action, opening that other resource.
+
+17 What are the different tags to separate sections of text?
+-> <br> tag – It is used to separate the line of text. It breaks the current line and shifts the flow of the text to a new line.
+   <p> tag–This tag is used to write a paragraph of text.
+   <blockquote> tag–This tag is used to define large quoted sections.
+
+
+18 What is SVG?
+-> SVG stands for Scalable Vector Graphics. 
+   It is an XML-based vector image format for two-dimensional graphics with support for 
+   interactivity and animation.
+
+
+19 What is the difference between HTML and XHTML?
+-> HTML is more lenient in its syntax
+   XHTML has a more strict syntax and follows XML rules.
+
+
+20 What are logical and physical tags in HTML?
+-> In HTML, logical tags represent the structure and meaning of the content , while physical tags represent 
+  how the content should be presented .
