@@ -1,100 +1,73 @@
-	1. What do you understand By Database?
-
-   A database is an organized collection of structured information, 
-   or data, typically stored electronically in a computer system.
-
-2. What is Normalization? 
-   
-   Normalization is the process of organizing the data in the database.
-   Normalization is used to minimize the redundancy from a relation or set of relations.
-   It is also used to eliminate undesirable characteristics like Insertion, Update, and Deletion Anomalies.
-   Normalization divides the larger table into smaller and links them using relationships.
-
-3. What is Difference between DBMS and RDBMS?  
-   
-   RDBMS:In Rdbms Data stored is in table format,In Rdbms Multiple data elements are accessible together,
-         and Data is stored in a large amount,
-         RDBMS supports multiple users.
-   DBMS :In Dbms Data stored is in the file format,
-         In Dbms Individual access of data elements,
-         DBMS supports a single user.
-
-4. What is EF Cod Rule of RDBMS Systems?  
-   
-   Rules:
-         1.Information Rule
-         2.Guaranteed Access Rule
-         3.Systematic Treatment of Null Values  
-         4.Dynamic Online Catalog Based On The Relational Model
-         5.Comprehensive Data Sublanguage Rule
-         6.View Updating Rule
-         7.High-Level insert,Update,and Delete
-         8.Physical Data independence
-         9.Logical Data independence
-        10.Integrity independence
-        11.Distribution independence
-        12.Non-Subversion Rule
-
-5. What do you understand By Data Redundancy? 
-   
-   Data redundancy is when multiple copies of the same information are stored in more than one place at a time.
-
-6. What is DDL Interpreter?  
-   
-   DDL Interpreter: DDL Interpreter: It interprets the DDL (Data Definition Language) Instructions and stores the record in a data dictionary.
-
-7. What is DML Compiler in SQL? 
-
-   A DML (data manipulation language) refers to a computer programming language that allows you to add,
-   delete, and alter data in a database. 
-  
-8. What is SQL Key Constraints writing an Example of SQL Key Constraints?
-
-   There are two SQL key constraints 
-   1. Primary key
-   2. Foreign key
-
-  1. PRIMARY KEY Constraint
-   
-  EXAMPLE:
-
-  CREATE TABLE Colleges (
-  college_id INT PRIMARY KEY,
-  college_code VARCHAR(20) NOT NULL,
-  college_name VARCHAR(50)
-  );     
-
-  2. FOREIGN KEY Constraint
-
-  EXAMPLE:
- 
-  CREATE TABLE Orders (
-  order_id INT PRIMARY KEY,
-  customer_id int REFERENCES Customers(id)
-  );  
-
-9. What is save Point? How to create a save Point write a Query?
-   
-   A Savepoint is a point in a transaction in which you can roll the transaction back to a certain point without rolling back the entire transaction.
-  
-10. What is trigger and how to create a Trigger in SQL?
-
-   A trigger is a stored procedure in a database that automatically invokes whenever a special event in the database occurs.
-
-  create trigger [trigger_name] 
-
-  [before | after]  
-
-  {insert | update | delete}  
-
-  on [table_name]  
-
-  [for each row]  
-
-  [trigger_body] 
+1 What do you understand By Database
+-> A database is an organized collection of structured information, or data,
+   typically stored electronically in a computer system. A database is usually 
+   controlled by a database management system (DBMS).
 
 
-1 - CREATE TABLE student( RollNo int PRIMARY KEY AUTO_INCREMENT NOT NULL, Name varchar(30), Branch varchar(300) );
+2 What is Normalization?
+-> Normalization is the process of organizing data in a database. It includes creating 
+   tables and establishing relationships between those tables according to rules designed 
+   both to protect the data and to make the database more flexible by eliminating redundancy
+   and inconsistent dependency. 
+
+
+3 What is Difference between DBMS and RDBMS?
+-> DBMS stands for Database Management System, and RDBMS is the acronym for the Relational 
+   Database Management system. In DBMS, the data is stored as a file, whereas in RDBMS, data 
+   is stored in the form of tables.
+
+
+4 What is MF Cod Rule of RDBMS Systems?
+-> Codd's rule in DBMS also known as Codd's 12 rules/commandments is a set of thirteen rules 
+   (numbered 0 to 12) that define a database to be a correct Relational Database Management 
+   System (RDBMS). If a database follows Codd's 12 rules, it is called a True relational 
+   database management system.
+
+
+5  What do you understand By Data Redundancy?
+-> Data redundancy occurs when the same piece of data exists in multiple places, whereas data 
+   inconsistency is when the same data exists in different formats in multiple tables. Unfortunately,
+   data redundancy can cause data inconsistency, which can provide a company with unreliable and/or 
+   meaningless information.
+
+6 What is DDL Interpreter?
+-> DDL Interpreter DDL expands to Data Definition Language. DDL Interpreter as the name suggests interprets
+   the DDL statements such as schema definition statements like create, delete, etc. The result of this interpretation
+   is a set of a table that contains the meta-data which is stored in the data dictionary.
+
+
+7  What is DML Compiler in SQL?
+-> A data manipulation language (DML) is a computer programming language used for adding (inserting), deleting, and modifying 
+   (updating) data in a database. A DML is often a sublanguage of a broader database language such as SQL, with the DML comprising 
+   some of the operators in the language.
+
+
+8  What is SQL Key Constraints writing an Example of SQL Key Constraints
+-> SQL constraints are used to specify rules for the data in a table. Constraints are used to limit the type of data that can go into 
+   a table. This ensures the accuracy and reliability of the data in the table. If there is any violation between the constraint and 
+   the data action, the action is aborted.
+
+
+9  What is save Point? How to create a save Point write a Query?
+-> A SAVEPOINT is a point in a transaction in which you can roll the transaction back to a certain point without rolling back the entire
+   transaction. Syntax for Savepoint command: SAVEPOINT SAVEPOINT_NAME; This command is used only in the creation of SAVEPOINT among all
+   the transactions.
+
+
+10  What is trigger and how to create a Trigger in SQL?
+-> A trigger is a special type of stored procedure that automatically runs when an event occurs in the database server. DML triggers run
+   when a user tries to modify data through a data manipulation language (DML) event. DML events are INSERT, UPDATE, or DELETE statements 
+   on a table or view.
+
+
+
+
+
+
+11
+-------
+
+-> CREATE TABLE student( RollNo int PRIMARY KEY AUTO_INCREMENT NOT NULL, Name varchar(30), Branch varchar(300) );
 
 INSERT INTO `student` (`RollNo`, `Name`, `Branch`) VALUES
 ('1', 'Jay', 'Computer Science'),
@@ -109,8 +82,7 @@ INSERT INTO `exam` (`RollNo`, `S_code`, `Marks`, `P_code`) VALUES
 ('2', 'EC101', '66', 'EC'), ('2', 'EC102', '70', 'EC'),
 ('3', 'EC101', '45', 'EC'), ('3', 'EC102', '50', 'EC');
 
-
-2 - CREATE TABLE Employee( Employee_id int(5), First_Name varchar(30), Last_Name varchar(30), Salary bigint (30), Joining_Date varchar(30), Department varchar(30) );
+-> CREATE TABLE Employee( Employee_id int(5), First_Name varchar(30), Last_Name varchar(30), Salary bigint (30), Joining_Date varchar(30), Department varchar(30) );
 
 
 
@@ -124,8 +96,6 @@ INSERT INTO `employee` (`Employee_id`, `First_Name`, `Last_Name`, `Salary`, `Joi
 ('7', 'Testname1', '123', '650000', '01-JAN-13','Services'), 
 ('8', 'Testname2', 'Lname%', '6000000', '01-FEB-13','Insurance');
 
-
-
 CREATE TABLE Incentive( Employee_ref_id int (5), Incentive_Date varchar (30), Incentive_amount bigint (50) );
 
 
@@ -137,81 +107,158 @@ INSERT INTO `incentive` (`Employee_ref_id`, `Incentive_Date`, `Incentive_amount`
 ('1', '01-JAN-13', '4500'), 
 ('2', '01-JAN-13', '3500');
 
-3 - SELECT First_Name FROM employee WHERE First_Name = 'Tom';
+12-Retrieve the below data from above table
 
-4 - SELECT First_Name, Joining_Date, Salary FROM employee;
+13- SELECT * FROM Customer WHERE OrderAmount > 1000;
+ 
+14- SELECT Name, City FROM Salesperson WHERE City = 'London' AND Commission > 0.12;
+ 
+15- SELECT * FROM Salesperson WHERE City IN (Barcelona, London);
 
-5 - SELECT * FROM employee ORDER BY First_Name ASC, Salary DESC;
-	
-6 - SELECT * FROM employee WHERE First_Name LIKE '%J%';
+16- SELECT * FROM Salesperson WHERE Commission > 0.10 AND Commission < 0.12;
 
-7 - SELECT Department, MAX(Salary) AS Max_Salary FROM employee GROUP BY Department ORDER BY Max_Salary DESC;
+17- SELECT * FROM Customer WHERE Rating > 100 OR (Rating <= 100 AND City = 'Rome');
 
-8 - SELECT * FROM Employee, ORDER BY salary ASC;
+18
+->CREATE TABLE Salesperson (
+    salesman_id INT PRIMARY KEY,
+    name VARCHAR(255),
+    city VARCHAR(255),
+    commission DECIMAL(5, 2)
+);
 
-9 - SELECT e.first_name, i.incentive_amount, FROM employee e, INNER JOIN incentives i ON e.employee_id = i.employee_id, WHERE i.incentive_amount > 3000;
+SELECT salesman_id, name, city, commission
+   FROM Salesperson;
 
-10 - CREATE TRIGGER after_employee_insert, AFTER INSERT ON Employee, FOR EACH ROW, BEGIN
-    INSERT INTO ViewTable (employee_id, employee_name, other_columns)
-    VALUES (NEW.employee_id, NEW.employee_name, NEW.other_columns);
-    END;
+salesman_id | name | city | commission
 
+5001  James Hoog New York  0.15
+5002  Nail Knite Paris     0.13
+5005  Pit Alex   London    0.11
+5006  Mc Lyon    Paris     0.14
+5007  Paul Adam  Rome      0.13
+5003  Lauson Hen San Jose  0.12
 
+19
+->CREATE TABLE Orders (
+    ord_no INT PRIMARY KEY,
+    purch_amt DECIMAL(10, 2),
+    ord_date DATE,
+    customer_id INT,
+    salesman_id INT
+);
+INSERT INTO Orders (ord_no, purch_amt, ord_date, customer_id, salesman_id);
 
+SELECT ord_no, ord_date, purch_amt
+FROM Orders
+WHERE salesman_id = 5001;
 
+table: orders
+ord_no purch_amt ord_date customer_id salesman_id
+70001 150.5 2012-10-05 3005 5002
+70009 270.65 2012-09-10 3001 5005
+70002 65.26 2012-10-05 3002 5001
+70004 110.5 2012-08-17 3009 5003
+70007 948.5 2012-09-10 3005 5002
+70005 2400.6 2012-07-27 3007 5001
+70008 5760 2012-09-10 3002 5001
+70010 1983.43 2012-10-10 3004 5006
+70003 2480.4 2012-10-10 3009 5003
+70012 250.45 2012-06-27 3008 5002
+70011 75.29 2012-08-17 3003 5007
+70013 3045.6 2012-04-25 3002 5001
 
-11 -CREATE TABLE Salesperson( PKSNo int (5), SNAME Varchar (30), CITY Varchar (30), COMM bigint (5) );
+20
+->SELECT pro_id, pro_name, pro_price, pro_com
+  FROM Products
+  WHERE pro_price BETWEEN 200.00 AND 600.00;
 
+table: item_mast
+PRO_ID PRO_NAME     PRO_PRICE PRO_COM
+101    Mother Board 3200.00     15
+102    Key Board    450.00      16
+103    ZIP drive    250.00      14
+104    Speaker      550.00      16
+105    Monitor      5000.00     11
+106    DVD drive    900.00      12
+107    CD drive     800.00      12
+108    Printer      2600.00     13
+109    Refill
+       cartridge    350.00      13
+110    Mouse        250.00      12
 
-INSERT INTO `salesperson` (`PKSNo`, `SNAME`, `CITY`, `COMM`) VALUES 
-('1001', 'Peel', 'London', '.12'), 
-('1002', 'Serres', 'San Jose', '.13'),
-('1004', 'Motika', 'London', '.11'), 
-('1007', 'Rafkin', 'Barcelona', '.15'), 
-('1003', 'Axelrod', 'New York', '.1');
+21
+->SELECT AVG(pro_price) AS avg_price
+  FROM Products
+  WHERE pro_com = 16;
 
+table: item_mast
+PRO_ID PRO_NAME     PRO_PRICE PRO_COM
+101    Mother Board 3200.00     15
+102    Key Board    450.00      16
+103    ZIP drive    250.00      14
+104    Speaker      550.00      16
+105    Monitor      5000.00     11
+106    DVD drive    900.00      12
+107    CD drive     800.00      12
+108    Printer      2600.00     13
+109    Refill
+       cartridge    350.00      13
+110    Mouse        250.00      12
 
+22
+->SELECT pro_name AS 'Item Name', pro_price AS 'Price in Rs.' 
+  FROM Products;
 
-CREATE TABLE Customer( PKCNM int (5), CNAME Varchar (30), CITY Varchar (30), RATING bigint (5), FKSNO int (5) );
+table: item_mast
+PRO_ID PRO_NAME     PRO_PRICE PRO_COM
+101    Mother Board 3200.00     15
+102    Key Board    450.00      16
+103    ZIP drive    250.00      14
+104    Speaker      550.00      16
+105    Monitor      5000.00     11
+106    DVD drive    900.00      12
+107    CD drive     800.00      12
+108    Printer      2600.00     13
+109    Refill
+       cartridge    350.00      13
+110    Mouse        250.00      12
 
+23
+->SELECT pro_name, pro_price
+  FROM Products
+  WHERE pro_price >= 250
+  ORDER BY pro_price DESC, pro_name ASC;
 
-INSERT INTO `customer` (`PKCNM`, `CNAME`, `CITY`, `RATING`, `FKSNO`) VALUES 
-('201', 'Hoffman', 'London', '100', '1001'), 
-('202', 'Giovanne', 'Roe', '200', '1003'), 
-('203', 'Liu', 'San Jose', '300', '1002'), 
-('204', 'Grass', 'Barcelona', '100', '1002'), 
-('206', 'Clemens', 'London', '300', '1007'), 
-('207', 'Pereira', 'Roe', '100', '1004');
+table: item_mast
+PRO_ID PRO_NAME     PRO_PRICE PRO_COM
+101    Mother Board 3200.00     15
+102    Key Board    450.00      16
+103    ZIP drive    250.00      14
+104    Speaker      550.00      16
+105    Monitor      5000.00     11
+106    DVD drive    900.00      12
+107    CD drive     800.00      12
+108    Printer      2600.00     13
+109    Refill
+       cartridge    350.00      13
+110    Mouse        250.00      12
 
+24
+->SELECT pro_com AS company_code, AVG(pro_price) AS average_price
+  FROM Products
+  GROUP BY pro_com;
 
-
-14 - SELECT SNAME, City FROM salesperson WHERE City = 'London' AND COMM > 0.12;
-15 - SELECT * FROM salesperson WHERE City IN ('Barcelona', 'London');
-
-17 - SELECT * FROM customer WHERE Rating > 100 OR CITY = 'Rome';
-
-18 - SELECT * FROM salespeople;
-
-19 - SELECT ord_no, ord_date, purch_amt, FROM orders, WHERE salesperson_id = 5001;
-
-20 - SELECT pro_id, pro_name, pro_price, pro_com, FROM products, WHERE pro_price BETWEEN 200 AND 600;
-
-21 - SELECT AVG  AS avg_price, FROM products, WHERE man_code = 16; 
-
-22 - SELECT pro_name AS 'Item Name', pro_price AS 'Price in Rs.' FROM products;
-
-23 - SELECT pro_name, pro_price, FROM products WHERE pro_price >= 250 ORDER BY pro_price DESC, pro_name ASC;
-
-24 - SELECT AVG AS average_price, companycode FROM products GROUP BY companycode;
-
-
-
-
-      
-
-   
-
-
-
-
-   
+table: item_mast
+PRO_ID PRO_NAME     PRO_PRICE PRO_COM
+101    Mother Board 3200.00     15
+102    Key Board    450.00      16
+103    ZIP drive    250.00      14
+104    Speaker      550.00      16
+105    Monitor      5000.00     11
+106    DVD drive    900.00      12
+107    CD drive     800.00      12
+108    Printer      2600.00     13
+109    Refill
+       cartridge    350.00      13
+110    Mouse        250.00      12
