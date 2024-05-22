@@ -1,0 +1,82 @@
+
+1. What are the benefits of using CSS?
+=> CSS offers benefits such as separation of content and presentation, consistency in design, faster page loading,
+   improved accessibility, and adaptability to different devices.
+
+
+2. What are the disadvantages of CSS?
+=> CSS drawbacks include browser compatibility issues, complexity in large projects, and limitations in controlling
+   complex layouts compared to other technologies.
+
+
+3. What is the difference between CSS2 and CSS3?
+=> CSS2 introduced advanced selectors and layout control in 1998, while CSS3, a modular set of specifications, added
+   features like gradients, animations, and transitions for more dynamic web design.
+
+
+4. Name a few CSS style components.
+=> CSS style components include selectors, properties, values, units, media queries, pseudo-classes, and pseudo-elements.
+
+
+5. What do you understand by CSS opacity?
+=> CSS opacity refers to the property that controls the transparency of an element, allowing adjustments to its level 
+   of transparency.
+
+
+6. How can the background color of an element be changed?
+=> The background color of an element can be changed using the background-color property in CSS.
+
+
+7. How can image repetition of the background be controlled?
+=> Image repetition of the background can be controlled using the background-repeat property in CSS with values like
+   repeat, repeat-x, repeat-y, or no-repeat.
+
+
+8. What is the use of the background-position property?
+=> The background-position property specifies the starting position of a background image within its container.
+
+
+9. Which property controls the image scroll in the background?
+=> The background-attachment property controls whether a background image scrolls with the content or remains fixed.
+
+
+10. Why should background and color be used as separate properties?
+=>  Separating background and color properties allows for better maintainability and flexibility in styling.
+
+
+11. How to center block elements using CSS1?
+=>  In CSS1, block elements can be centered by setting the left and right margins to auto.
+
+
+12. How to maintain the CSS specifications?
+=>  CSS specifications are maintained by organizations like the World Wide Web Consortium (W3C) through regular
+    updates and revisions.
+
+13. What are the ways to integrate CSS as a web page?
+=>  CSS can be integrated using embedded style sheets, external style sheets, or inline styles.
+
+
+14. What is embedded style sheets?
+=>  Embedded style sheets are CSS styles written within the <style> tags in the <head> section of an HTML document.
+
+
+15. What are external style sheets?
+=>  External style sheets are separate CSS files linked to HTML documents using the <link> element.
+
+16. What are the advantages and disadvantages of using external style sheets?
+=>  Advantages include code reusability, ease of maintenance, and consistency, while disadvantages may include
+    additional HTTP requests and complexity in managing multiple files.
+
+
+17. What is the meaning of the CSS selector?
+=>  A CSS selector is a pattern used to select and style elements in an HTML document.
+    What are the media types allowed by CSS?
+
+
+    CSS supports media types such as all, screen, print, speech, projection, handheld, etc., for applying styles
+    based on the presentation medium.
+
+
+18. What is the rule set in CSS?
+=>  A rule set in CSS consists of a selector and one or more declarations enclosed in curly braces, defining
+    how elements matching the selector should be styled.
