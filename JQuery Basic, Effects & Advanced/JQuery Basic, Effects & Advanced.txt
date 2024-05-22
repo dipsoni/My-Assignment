@@ -1,0 +1,85 @@
+1.What is jQuery?
+=>  jQuery is a lightweight, "write less, do more", JavaScript library.
+->  jQuery is to make it much easier to use JavaScript on your website.
+->  jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+
+2. How to Apply CSS Using jQuery, 
+   How to Add Class and Remove Class in jQuery,
+   jQuery Animation?
+
+=>Aply css using jQuery,
+  
+  For example, to change the color of an element with the ID "myElement" to red:
+
+  $("myElement").css("color", "red");
+
+=>Add Class and Remove Class in jQuery,
+
+add class:
+you can use '.addclass(classname)',for example
+
+$("myElement").addClass("newClass");
+
+remove classs:
+you can use '.removeclass(classname)',for example
+
+$("myelment").removeclass("oldclass");
+
+=>jQuery Animation,
+
+  jQuery provides several methods for animation, such as 
+  .hide(), .show(), .fadeIn(), .fadeOut(), .slideUp(), and .slideDown().
+
+  This methode allow you to animate the visibility of elements on your webpage.
+
+for example:
+
+$("#myElement").hide(); 
+$("#myElement").fadeIn(); 
+
+
+3.How to create slider with animation?
+
+create slider with animation,
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <style>
+        .main{
+            padding: 20px;
+            background-color: green;
+            text-align: center;
+        }
+        .sub{
+            padding: 20px;
+            background-color: red;
+            text-align: center;
+            display: none;
+            
+        }
+     </style>
+</head>
+<body>
+    <div class="main">Click</div>
+    <div class="sub">Slide</div>
+</body>
+<script>
+    $(document).ready(function (){
+        $(".main").click( function () {
+            $(".sub").slideToggle(3000) 
+        })
+    })
+
+    $(document).ready(function (){
+    })
+</script>
+</html>
+ 
+
+
+
