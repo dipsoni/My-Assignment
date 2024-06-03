@@ -1,0 +1,236 @@
+1 What are the looping structures in JavaScript? Any one Example?
+=>for loop: Executes a block of code a specified number of times.
+ while loop: Executes a block of code while a specified condition is true.
+ do...while loop: Executes a block of code once before checking the condition.
+ for...in loop: Iterates over the properties of an object.
+ for...of loop: Iterates over iterable objects.
+
+ex:
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+
+ 
+2. Write a print 972 to 897 using for loop in JS?
+=> for (let i = 972; i >= 897; i--) {
+    console.log(i);
+}
+
+ 
+3. Write to print factorial of given number?
+=> function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+console.log(factorial(5)); // Output: 120
+
+
+ 
+4. Write to print Fibonacci series up to given numbers?
+=> function fibonacci(n) {
+    let fib = [0, 1];
+    for (let i = 2; fib[i - 1] + fib[i - 2] <= n; i++) {
+        fib.push(fib[i - 1] + fib[i - 2]);
+    }
+    return fib;
+}
+
+console.log(fibonacci(50)); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+
+ 
+5. Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?
+=> function reverseNumber(number) {
+    return parseInt(number.toString().split('').reverse().join(''));
+}
+
+console.log(reverseNumber(64728)); // Output: 82746
+
+
+ 
+6. Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?
+=> function digitSum(number) {
+    let sum = 0;
+    while (number > 0) {
+        sum += number % 10;
+        number = Math.floor(number / 10);
+    }
+    return sum;
+}
+
+console.log(digitSum(1523)); // Output: 11
+
+
+ 
+7. Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: -5) in JS? 
+=> function firstLastDigitSum(number) {
+    let firstDigit = parseInt(number.toString()[0]);
+    let lastDigit = parseInt(number.toString().slice(-1));
+    return firstDigit + lastDigit;
+}
+
+console.log(firstLastDigitSum(1234)); // Output: 5
+
+
+8. Use console.log() and escape characters to print the following pattern in JS?
+=> // Loop for each row
+for (let i = 1; i <= 5; i++) {
+    let row = ''; // Initialize an empty string for each row
+    
+    // Loop for each column in the row
+    for (let j = 1; j <= 5; j++) {
+        if (j === 1) {
+            row += i + ' '; // Append the value of i for the first column
+        } else {
+            row += Math.pow(i, j) + ' '; // Append the value of i raised to the power of j
+        }
+    }
+    
+    console.log(row); // Print each row
+}
+
+
+9. Use pattern in console.log in JS?
+=>
+
+1) 1
+1 0
+1 0 1
+1 0 1 0
+1 0 1 0 1 
+
+
+// Loop for each row
+for (let i = 1; i <= 5; i++) {
+    let row = ''; // Initialize an empty string for each row
+    
+    // Loop for each column in the row
+    for (let j = 1; j <= i; j++) {
+        if (j % 2 === 0) {
+            row += '0 '; // Append '0' if the column number is even
+        } else {
+            row += '1 '; // Append '1' if the column number is odd
+        }
+    }
+    
+    console.log(row); // Print each row
+}
+
+
+2)A
+B C
+D E F
+G H I J
+K L M N O
+
+// Initialize variables for character code starting from 'A' and count of characters per row
+let charCode = 65; // ASCII code for 'A'
+let charCount = 1;
+
+// Loop for each row
+for (let i = 1; i <= 5; i++) {
+    let row = ''; // Initialize an empty string for each row
+    
+    // Loop for each character in the row
+    for (let j = 1; j <= charCount; j++) {
+        row += String.fromCharCode(charCode) + ' '; // Append the character corresponding to the ASCII code
+        
+        charCode++; // Increment the character code for the next character
+    }
+    
+    console.log(row); // Print each row
+    charCount++; // Increment the count of characters for the next row
+}
+
+
+3)1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+
+let counter = 1;
+
+// Loop for each row
+for (let i = 1; i <= 5; i++) {
+    let row = ''; // Initialize an empty string for each row
+    
+    // Loop for each element in the row
+    for (let j = 1; j <= i; j++) {
+        row += counter + ' '; // Append the current counter value
+        counter++; // Increment the counter for the next element
+    }
+    
+    console.log(row); // Print each row
+}
+
+
+
+4)*
+* *
+* * *
+* * * *
+* * * * *
+
+// Loop for each row
+for (let i = 1; i <= 5; i++) {
+    let row = ''; // Initialize an empty string for each row
+    
+    // Loop for each column in the row
+    for (let j = 1; j <= i; j++) {
+        row += '* '; // Append an asterisk (*) for each column
+    }
+    
+    console.log(row); // Print each row
+}
+
+
+
+10. Accept 3 numbers from user using while loop and check each numbers palindrome? 
+=> function isPalindrome(number) {
+    const originalNumber = number;
+    let reversedNumber = 0;
+    
+    // Reverse the number
+    while (number > 0) {
+        const digit = number % 10;
+        reversedNumber = (reversedNumber * 10) + digit;
+        number = Math.floor(number / 10);
+    }
+    
+    // Check if the reversed number is equal to the original number
+    return originalNumber === reversedNumber;
+}
+
+let count = 0;
+while (count < 3) {
+    let userInput = prompt("Enter a number:");
+    
+    // Convert the user input to a number
+    const number = parseInt(userInput);
+    
+    // Check if the input is a number
+    if (!isNaN(number)) {
+        // Check if the number is a palindrome
+        if (isPalindrome(number)) {
+            console.log(number + " is a palindrome.");
+        } else {
+            console.log(number + " is not a palindrome.");
+        }
+        count++;
+    } else {
+        console.log("Invalid input. Please enter a valid number.");
+    }
+}
+
+
+
+
+ 

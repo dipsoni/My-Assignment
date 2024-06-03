@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border: 1px solid black;
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h3>Marksheet</h3>
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center;">Enter Marks</td>
+            </tr>
+            <tr>
+                <td><label for="c">C Language:</label></td>
+                <td><input type="text" id="c"></td>
+            </tr>
+
+            <tr>
+                <td><label for="cpp">C++ Language:</label></td>
+                <td><input type="text" id="cpp"></td>
+            </tr>
+
+            <tr>
+                <td><label for="data">Database:</label></td>
+                <td><input type="text" id="data"></td>
+            </tr>
+
+            <tr>
+                <td><label for="html">HTML:</label></td>
+                <td><input type="text" id="html"></td>
+            </tr>
+
+            <tr>
+                <td><label for="css">CSS:</label></td>
+                <td><input type="text" id="css"></td>
+            </tr>
+
+            <tr>
+                <td><label for="php">PHP:</label></td>
+                <td><input type="text" id="php"></td>
+            </tr>
+
+            <tr>
+                <td><label for="java">Core JAVA:</label></td>
+                <td><input type="text" id="java"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><Button onclick="result()">Result</Button></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Total is:<span id="result"></span></p>
+                </td>
+                <td>
+                    <p>Percentage is: <span id="percentage"></span></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+    function result() {
+
+        var m1 = parseInt(document.getElementById("c").value);
+        var m2 = parseInt(document.getElementById("cpp").value);
+        var m3 = parseInt(document.getElementById("data").value);
+        var m4 = parseInt(document.getElementById("html").value);
+        var m5 = parseInt(document.getElementById("css").value);
+        var m6 = parseInt(document.getElementById("php").value);
+        var m7 = parseInt(document.getElementById("java").value);
+
+        var total = m1 + m2 + m3 + m4 + m5 + m6 + m7;
+        var per = ((m1 + m2 + m3 + m4 + m5 + m6 + m7) / 350) * 100
+        document.getElementById('result').innerHTML = total + "<b>/350</b>";
+        document.getElementById('percentage').innerHTML = per.toFixed(2) + "<b>%</b>";
+    }
+
+</script>
+
+</html>
