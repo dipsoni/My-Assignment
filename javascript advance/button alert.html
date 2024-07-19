@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Alert</title>
+    <style>
+        .btn {
+            display: flex;
+            height: 97vh;
+            gap: 10px;
+        }
+
+        .btn button {
+            width: 256px;
+            height: 68px;  
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="btn">
+        <button onclick="showAlert()">Button 1</button>
+        <button onclick="showAlert()">Button 2</button>
+        <button onclick="showAlert()">Button 3</button>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert('Button clicked!');
+        }
+    </script>
+</body>
+
+</html>

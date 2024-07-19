@@ -1,0 +1,190 @@
+-----------------------------------------------------Module 1------------------------------------------------------------
+
+
+1. Write the code, one line for each action:
+=>
+1) Create an empty object user.
+let user = {};
+
+2) Add the property name with the value John.
+user.name = "John";
+
+3) Add the property surname with the value Smith.
+user.surname = "Smith";
+
+4) Change the value of the name to Pete.
+user.name = "Pete";
+
+5) Remove the property name from the object.
+delete user.name;
+
+
+
+2. Is array copied?
+=> let fruits = ["Apples", "Pear", "Orange"]; 
+  let shoppingCart = fruits;
+  shoppingCart.push("Banana"); 
+
+  console.log(fruits); // ["Apples", "Pear", "Orange", "Banana"]
+  console.log(shoppingCart); // ["Apples", "Pear", "Orange", "Banana"]
+
+
+
+3. Map to names
+=>
+let john = { name: "John", age: 25 }; 
+let pete = { name: "Pete", age: 30 }; 
+let mary ={ name: "Mary", age: 28 }; 
+let users = [ john, pete, mary ]; 
+let names = /* ... your code */ 
+alert( names ); // John, Pete, Mary
+
+=>let names = users.map(user => user.name);
+
+
+
+
+4. Map to objects
+=>
+let john = { name: "John", surname: "Smith", id: 1 };
+let pete = { name: "Pete", surname: "Hunt", id: 2 };
+let mary = { name: "Mary", surname: "Key", id: 3 };
+
+let users = [john, pete, mary];
+
+// Use map to create a new array of objects with fullName and id
+let usersMapped = users.map(user => ({
+    fullName: user.name + ' ' + user.surname,
+    id: user.id
+}));
+
+alert(usersMapped[0].id); // 1
+alert(usersMapped[0].fullName); // John Smith
+
+
+
+5. Sum the properties There is a salaries object with arbitrary number of salaries. Write
+the function sumSalaries(salaries) that returns the sum of all salaries using
+Object.values and the for..of loop.If salaries is empty, then the result must be 0
+=> function sumSalaries(salaries) {
+        let totalSalary = 0;
+        for (let salary of Object.values(salaries)) {
+            totalSalary += salary;
+        }
+        return totalSalary;
+    }
+
+    let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+    };
+
+    alert(sumSalaries(salaries)); // 650
+
+
+
+
+
+6. Destructuring assignment We have an object: Write the Destructuring assignment that reads:
+=> let user = { name: "John", years: 30 };
+
+let { name, years: age, isAdmin = false } = user;
+
+console.log(name);   // Output: "John"
+console.log(age);    // Output: 30
+console.log(isAdmin); // Output: false
+
+----------------------------------------------------Modul 2------------------------------------------------------
+
+1. Write the code, one line for each action:
+
+a) Create an empty object user.
+let user = {};
+
+b) Add the property name with the value John.
+user.name = "John";
+
+c) Add the property surname with the value Smith.
+user.surname = "Smith";
+
+d) Change the value of the name to Pete.
+user.name = "Pete";
+
+e) Remove the property name from the object.
+delete user.name;
+
+
+
+2.Is array copied?
+> let fruits = ["Apples", "Pear", "Orange"]; 
+  let shoppingCart = fruits;
+  shoppingCart.push("Banana"); 
+
+  console.log(fruits); // ["Apples", "Pear", "Orange", "Banana"]
+  console.log(shoppingCart); // ["Apples", "Pear", "Orange", "Banana"]
+
+
+
+3. Map to names
+let john = { name: "John", age: 25 }; 
+let pete = { name: "Pete", age: 30 }; 
+let mary ={ name: "Mary", age: 28 }; 
+let users = [ john, pete, mary ]; 
+let names = /* ... your code */ 
+alert( names ); // John, Pete, Mary
+
+>let names = users.map(user => user.name);
+
+
+
+
+5. Map to objects
+>let john = { name: "John", surname: "Smith", id: 1 };
+let pete = { name: "Pete", surname: "Hunt", id: 2 };
+let mary = { name: "Mary", surname: "Key", id: 3 };
+
+let users = [john, pete, mary];
+
+// Use map to create a new array of objects with fullName and id
+let usersMapped = users.map(user => ({
+    fullName: user.name + ' ' + user.surname,
+    id: user.id
+}));
+
+alert(usersMapped[0].id); // 1
+alert(usersMapped[0].fullName); // John Smith
+
+
+
+6. Sum the properties There is a salaries object with arbitrary number of salaries. Write
+the function sumSalaries(salaries) that returns the sum of all salaries using
+Object.values and the for..of loop.If salaries is empty, then the result must be 0
+> function sumSalaries(salaries) {
+        let totalSalary = 0;
+        for (let salary of Object.values(salaries)) {
+            totalSalary += salary;
+        }
+        return totalSalary;
+    }
+
+    let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+    };
+
+    alert(sumSalaries(salaries)); // 650
+
+
+
+
+
+7.  Destructuring assignment We have an object: Write the Destructuring assignment that reads:
+> let user = { name: "John", years: 30 };
+
+let { name, years: age, isAdmin = false } = user;
+
+console.log(name);   // Output: "John"
+console.log(age);    // Output: 30
+console.log(isAdmin); // Output: false
